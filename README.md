@@ -10,6 +10,8 @@ Será desenvolvido uma aplicação que mostrará todos os dados e ações possí
 
 A API por sua vez será implementada em Python com deploy na AWS. Para que não seja necessário ter que utilizar sensores, microcontroladoes etc para alimentar a API com dados, utilizaremos datasets afim de simular um comportamento mais próximo do real possível.
 
+[![esquema.png](https://i.postimg.cc/GtGn7skg/esquema.png)](https://postimg.cc/kRJHDGYW)
+
 ##  Tecnologias utlizadas
 - Engine (React)
 - Gráficos (Highcharts)
