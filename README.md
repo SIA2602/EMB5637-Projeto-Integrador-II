@@ -39,7 +39,7 @@ A API por sua vez será implementada em Python com deploy na AWS. Para que não 
 ## Cronograma de Atividades para o Projeto
 
 |  Tarefas   <td colspan="4">Julho</td>  <td colspan="4">Agosto</td>  <td colspan="4">Setembro</td>  |
-| ---: | :---: | :---: | :---: | --- |
+| ---: | :---: | :---: | :---: |
 | Especificação dos requisitos |  ||||||||||||
 |  Entrega da etapa 1 |  x  |   |   | |||||||||
 |  Modelagem do sistema |  x  | x  |   | |||||||||
