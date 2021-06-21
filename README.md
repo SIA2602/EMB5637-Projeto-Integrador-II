@@ -18,7 +18,7 @@ A API por sua vez será implementada em Python com deploy na AWS. Para que não 
 ## Cronograma de Atividades para a Disciplina
 
 | Semana |  Data  | Atividade |
-| ------------ | ------------ | ------------ |
+| :---: | ------------ | ------------ |
 |  1  |  14/06/21  | Apresentação da disciplina e discussão sobre os projetos.  |
 |  2  |  21/06/21 | Apresentação das propostas de projeto – Descrição formal escrita, contendo as funcionalidades do sistema, hardware, sensores/atuadores e/ou algortimos, além de um cronograma com atividades.  |
 |  3  | 28/06/21  |  Desenvolvimento do projeto – Especificação dos requisitos. |
@@ -35,3 +35,18 @@ A API por sua vez será implementada em Python com deploy na AWS. Para que não 
 |  14  | 13/09/21  | Desenvolvimento do projeto.  |
 |  15  |  20/09/21 | Apresentação e entrega dos projetos.  |
 |  16  | 27/09/21  | REC |
+
+## Cronograma de Atividades para o Projeto
+
+|  Tarefas   <td colspan="4">Julho</td>  <td colspan="4">Agosto</td>  <td colspan="4">Setembro</td>  |
+| ---: | :---: | :---: | :---: | --- |
+| Especificação dos requisitos |  ||||||||||||
+|  Entrega da etapa 1 |  x  |   |   | |||||||||
+|  Modelagem do sistema |  x  | x  |   | |||||||||
+| Entrega da etapa 2  |    |  x |   | |||||||||
+|  Implementação (Parte 1) |    |   |  | x| x ||||||||
+| Entrega da etapa 3  |    |   |   | ||x|||||||
+| Implementação (Parte 2 e testes unitários)  |    |   |   | ||x|x|x|||||
+| Entrega da etapa 4 |    |   |   | ||||x|||||
+| Desenvolvimento do projeto |    |   |   | ||||x|x|x|x||
+| Apresentação e entrega dos projetos  |    |   |   | |||||||x||
