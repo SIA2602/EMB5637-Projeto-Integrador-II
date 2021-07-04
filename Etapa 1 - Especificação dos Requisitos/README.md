@@ -1,9 +1,7 @@
 ------------
 
 ># EMB5637 - Projeto Integrador II
-
 >## Etapa 1 - Especificação dos Requisitos
-
 >### Danilo José da Silva (16150413)
 
 ------------
