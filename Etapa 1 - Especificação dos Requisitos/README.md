@@ -1,19 +1,19 @@
 # Etapa 1 - Especificação dos Requisitos
 
-##1. Introdução
+## 1. Introdução
 
-> ####Objetivo
-
-
-------------
-
->####Público-alvo
+> #### Objetivo
 
 
 ------------
 
+>#### Público-alvo
 
->####Uso Pretendido
+
+------------
+
+
+>#### Uso Pretendido
 
 
 ------------
@@ -31,7 +31,7 @@
 ------------
 
 
-##2. Descrição geral
+## 2. Descrição geral
 
 >#### Necessidades do usuário
 
@@ -39,34 +39,34 @@
 ------------
 
 
->####Suposições e Dependências
+>#### Suposições e Dependências
 
 
 ------------
 
 
 
-##3. Recursos e requisitos do sistema
+## 3. Recursos e requisitos do sistema
 
->####Requisitos Funcionais
-
-
-------------
-
-
->####Requisitos de interface externa
+>#### Requisitos Funcionais
 
 
 ------------
 
 
->####Recursos do sistema
+>#### Requisitos de interface externa
 
 
 ------------
 
 
->####Requisitos não funcionais
+>#### Recursos do sistema
+
+
+------------
+
+
+>#### Requisitos não funcionais
 
 
 ------------
