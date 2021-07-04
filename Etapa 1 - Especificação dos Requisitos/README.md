@@ -1,6 +1,14 @@
-# Etapa 1 - Especificação dos Requisitos
+------------
 
-## 1. Introdução
+># EMB5637 - Projeto Integrador II
+
+>## Etapa 1 - Especificação dos Requisitos
+
+>### Danilo José da Silva (16150413)
+
+------------
+
+### 1. Introdução
 
 > #### Objetivo
 
@@ -31,7 +39,7 @@
 ------------
 
 
-## 2. Descrição geral
+### 2. Descrição geral
 
 >#### Necessidades do usuário
 
@@ -46,7 +54,7 @@
 
 
 
-## 3. Recursos e requisitos do sistema
+### 3. Recursos e requisitos do sistema
 
 >#### Requisitos Funcionais
 
