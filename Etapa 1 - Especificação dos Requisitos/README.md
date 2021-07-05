@@ -23,26 +23,26 @@
 
 ------------
 
-
 >#### Definições e acrônimos
 > Os riscos envolvidos na falha da aplicação se encontra no sistema embracado que coleta os dados das maquinas e o disponibiliza a um API que é consumida pelo software. Já que o foco principal desse trabalho esta apenas no desenvolvimento de sofware o único risco a ser considerado estará em sua programação.
 
 ------------
 
-
 ### 2. Descrição geral
 
+------------
+
+
 >#### Necessidades do usuário
-
-
-------------
-
-
->#### Suposições e Dependências
-
+> A utilização da aplicação se dará por um usuário primário, sendo que esse é o responsável pela unidade em que esta implantada a aplicação. Esse usuário possui uma necessidade de estar atento a possiveis falhas e paradas de equipamentos não programadas, e com esse intuito o software desenvolvido irá facilitar não só na sua tomada de decisão mas como irá evitar deslocamentos desnecessarios aos equipamentos visto que tudo pode ser acompanhado pelo seu dispositivo móvel. Por todo histórico de cada ativo estar em um banco de dados e disponivel para consulta no sofware será evitado a utilização de anotações em papel.
 
 ------------
 
+
+>#### Dependências
+> O software esta intrisicamente ligado ao hardware que alimenta a API da aplicação, a fatores de compatibilidade e conexão com a internet visto que o software só poderá ser utilizado online.
+
+------------
 
 
 ### 3. Recursos e requisitos do sistema
@@ -56,8 +56,6 @@
 
 ------------
 
-
-
 >#### Requisitos não funcionais
 > Nos requisitos não funcionais o foco se dá em **como será feito**, ou seja, são as características técnicas. As quais podemos listar:
 > - tipos de dispositivos em que o software será utilizado;
@@ -67,5 +65,3 @@
 > - conexão com a internet.
 
 ------------
-
-
