@@ -48,25 +48,23 @@
 ### 3. Recursos e requisitos do sistema
 
 >#### Requisitos Funcionais
-
-
-------------
-
-
->#### Requisitos de interface externa
-
+> Como os requisitos funcionais foca **no que será feito**, então esses requisitos são todos os problemas e necessidades que devem ser atendidos e resolvidos pelo software, sendo que podemos listar as funcionalidades que:
+> - é responsável pelo consumo dos dados da API;
+> - gera Cards e Botões contendo as ações relevantes a cada página;
+> - oculta os itens que não estão sendo utilizadas na página;
+> - gera os gráficos.
 
 ------------
 
-
->#### Recursos do sistema
-
-
-------------
 
 
 >#### Requisitos não funcionais
-
+> Nos requisitos não funcionais o foco se dá em **como será feito**, ou seja, são as características técnicas. As quais podemos listar:
+> - tipos de dispositivos em que o software será utilizado;
+> - navegadores web compátiveis com a aplicação;
+> - processamento demandado;
+> - consumo de memória exigido pelos recursos;
+> - conexão com a internet.
 
 ------------
 
