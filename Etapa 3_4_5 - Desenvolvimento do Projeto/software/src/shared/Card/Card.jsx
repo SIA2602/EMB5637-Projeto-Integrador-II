@@ -10,7 +10,7 @@ class Card extends React.Component{
         super(props)       
         this.card = <Wrapper heightCard={props.heightCard} widthCardDesktop={props.widthCardDesktop} widthCardMobile={props.widthCardMobile}>
             <Header title={props.title} icon={props.icon} widthCardDesktop={props.widthCardDesktop} widthCardMobile={props.widthCardMobile} heightHeaderCard={props.heightHeaderCard}/>
-            <Body widthCardDesktop={props.widthCardDesktop} widthCardMobile={props.widthCardMobile} heightBodyCard={props.heightBodyCard}/>
+            <Body componentList={props.componentList} widthCardDesktop={props.widthCardDesktop} widthCardMobile={props.widthCardMobile} heightBodyCard={props.heightBodyCard}/>     
         </Wrapper>
     }
 

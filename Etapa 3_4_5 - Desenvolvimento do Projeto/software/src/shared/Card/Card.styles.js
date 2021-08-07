@@ -13,5 +13,5 @@ export const Wrapper = styled.div`
     @media (max-width: 1200px)
     {
         width: ${props => props.widthCardMobile}vw;   
-    }    
+    }   
 `

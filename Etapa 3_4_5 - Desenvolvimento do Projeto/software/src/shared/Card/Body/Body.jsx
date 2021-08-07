@@ -1,9 +1,9 @@
 import React from 'react'
-import { Wrapper } from './Body.styles'
+import { Wrapper, ListElements } from './Body.styles'
 
-function Body({widthCardDesktop, widthCardMobile, heightBodyCard}){
+function Body({componentList, widthCardDesktop, widthCardMobile, heightBodyCard}){
     return <Wrapper widthCardDesktop={widthCardDesktop} widthCardMobile={widthCardMobile} heightBodyCard={heightBodyCard}>
-        Ola
+        {componentList.map(components => <ListElements>{components}</ListElements>)}        
     </Wrapper>
 }
 
