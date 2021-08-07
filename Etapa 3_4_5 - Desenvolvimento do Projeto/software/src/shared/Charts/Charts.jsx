@@ -2,10 +2,16 @@ import React from 'react'
 import Highcharts from "highcharts";
 import HighchartsReact from "highcharts-react-official";
 
-function Charts({options}){    
-    return(                                      
-        <HighchartsReact highcharts={Highcharts} options={options} />           
-    )
+class Charts extends React.Component{    
+
+    constructor(props){
+        super(props)
+        this.charts = <HighchartsReact highcharts={Highcharts} options={props.options} />
+    }
+
+    render(){
+        return this.charts
+    }   
 }
 
 export default Charts

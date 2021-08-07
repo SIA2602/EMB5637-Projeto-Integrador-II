@@ -15,9 +15,7 @@ class Card extends React.Component{
     }
 
     render(){        
-        return(
-            this.card         
-        )                   
+        return this.card                           
     }
 }
 
