@@ -37,12 +37,14 @@ export const ScrollingY = styled.div`
     height: 30vh;
     width: 95vw;
     padding: 8px;
+    background-color: white;
 
     display: grid;
+    align-items: center;
+    justify-content: center;
     flex-wrap: nowrap;
-    overflow-y: auto;        
-
-    border: 2px solid #000000;
+    overflow-y: auto;   
+    overflow-x: hidden;         
 `
 
 export const LineBarTest = styled.div`

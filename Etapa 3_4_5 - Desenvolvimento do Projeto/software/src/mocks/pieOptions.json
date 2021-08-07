@@ -1,0 +1,50 @@
+{
+    "chart": {
+      "type": "pie",
+      "height": "300",
+      "width": "200",
+      "margin": [0, 0, 120, 0]
+    },
+
+    "title": {
+      "text": "", 
+      "useHTML": false    
+    },
+
+    "legend": {
+      "padding": 0,
+      "itemMarginTop": 1,
+      "itemMarginBottom": 1      
+    },
+
+    "plotOptions": {
+        "pie": {
+            "allowPointSelect": true,
+            "cursor": "pointer",
+            "dataLabels": {
+                "enabled": true,
+                "format": "<b>{point.y}",
+                "distance": -35                
+            },           
+            "showInLegend": true        
+        }
+    },
+
+    "series": [{
+        "name": "Brands",
+        "colorByPoint": true,        
+        "data": [{
+          "name": "inOperation",
+          "y": 3,
+          "color": "green"          
+        }, {
+          "name": "inAlert",
+          "y": 5,
+          "color": "orange"
+        }, {
+          "name": "inDowntime",
+          "y": 2,
+          "color": "red"
+        }]
+      }]   
+}

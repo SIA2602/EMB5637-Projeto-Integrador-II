@@ -1,0 +1,75 @@
+{
+    "chart": {
+        "type": "bar",
+        "height": "1000px"
+    },
+
+    "title": {
+        "text": ""
+    }, 
+       
+    "xAxis": {
+        "categories": ["Janeiro", "Fevereiro", "Março", "Abril", "Junho"],
+        "title": {
+            "text": null
+        }
+    },
+
+    "yAxis": {
+        "min": 0,
+        "title": {
+            "text": "Numero de Falhas",
+            "align": "high"
+        },
+        "labels": {
+            "overflow": "justify"
+        }
+    },
+
+    "tooltip": {
+        "valueSuffix": "falhas"
+    },
+
+    "plotOptions": {
+        "bar": {
+            "dataLabels": {
+                "enabled": true
+            }
+        }
+    },
+
+    "legend": {
+        "layout": "horizontal",
+        "align": "center",
+        "verticalAlign": "top",
+        "x": 0,
+        "y": 0,
+        "enabled": true       
+    },
+
+    "credits": {
+        "enabled": false
+    },
+
+    "series": [{
+        "name": "Hal",
+        "data": [1, 3, 1, 0, 4],
+        "color": "magenta"
+    }, {
+        "name": "Multivac",
+        "data": [3, 5, 1, 2, 3],
+        "color": "orange"
+    }, {
+        "name": "Thebrain",
+        "data": [4, 2, 2, 1, 3],
+        "color": "cyan"
+    }, {
+        "name": "Tobias",
+        "data": [4, 2, 2, 1, 3],
+        "color": "red"
+    }, {
+        "name": "Jaguar",
+        "data": [4, 2, 2, 1, 3],
+        "color": "green"
+    }]
+}
