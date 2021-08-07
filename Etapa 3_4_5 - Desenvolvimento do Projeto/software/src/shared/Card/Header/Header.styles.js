@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
 export const Wrapper = styled.header`
-    height: 5vh;
-    width: 20vw;   
+    height: ${props => props.heightHeaderCard}vh;
+    width: ${props => props.widthCardDesktop}vw;    
     margin-right: 24px;
     background-color: #FFFFFF;
     box-shadow: 0px 1px 0px 0px #E8E8E8;
@@ -18,7 +18,7 @@ export const Wrapper = styled.header`
 
     @media (max-width: 1200px)
     {
-        width: 65vw;   
+        width: ${props => props.widthCardMobile}vw;   
     }
 
     position: relative;

@@ -1,8 +1,10 @@
 import React from 'react'
-import { CardBody } from './Body.styles'
+import { Wrapper } from './Body.styles'
 
-function Body(){
-    return <CardBody />
+function Body({widthCardDesktop, widthCardMobile, heightBodyCard}){
+    return <Wrapper widthCardDesktop={widthCardDesktop} widthCardMobile={widthCardMobile} heightBodyCard={heightBodyCard}>
+        Ola
+    </Wrapper>
 }
 
 export default Body
