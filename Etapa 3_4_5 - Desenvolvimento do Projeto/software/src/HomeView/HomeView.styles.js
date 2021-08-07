@@ -28,7 +28,7 @@ export const ScrollingX = styled.div`
 
     display: flex;
     flex-wrap: nowrap;
-    overflow-x: auto;        
+    overflow-x: auto;      
 
     border: 2px solid #000000;
 `
@@ -45,15 +45,6 @@ export const ScrollingY = styled.div`
     border: 2px solid #000000;
 `
 
-export const CardTest = styled.div`
-    height: 45vh;
-    width: 300px;   
-    margin-left: 20px;
-    background-color: #000000;
-    border-radius: 10px;   
-
-    flex: 0 0 auto;
-`
 export const LineBarTest = styled.div`
     height: 20px;
     width: 300px;       
