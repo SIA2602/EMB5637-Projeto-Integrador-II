@@ -4,6 +4,7 @@ export const Wrapper = styled.div`
     height: ${props => props.heightBodyCard}vh;
     width: ${props => props.widthCardDesktop}vw;
     text-align: center;  
+    margin-top: 16px;
 
     display: grid;
     align-items: center;

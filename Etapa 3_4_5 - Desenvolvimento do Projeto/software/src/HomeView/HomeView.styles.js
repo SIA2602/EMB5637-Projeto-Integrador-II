@@ -10,7 +10,8 @@ export const Wrapper = styled.div`
     justify-content: center;       
 `
 
-export const Title = styled.h3`
+export const Title = styled.h3`    
+    width: 100vw;
     display: flex;
     padding-top: 48px;
     padding-left: 24px;        
@@ -20,6 +21,7 @@ export const Title = styled.h3`
 
 export const ScrollingX = styled.div`
     height: auto;    
+    width: 100vw;
     padding: 16px;  
 
     display: flex;
@@ -30,6 +32,7 @@ export const ScrollingX = styled.div`
 
 export const ScrollingY = styled.div`
     height: 30vh;   
+    width: 100vw;
     background-color: white;
 
     display: grid;
