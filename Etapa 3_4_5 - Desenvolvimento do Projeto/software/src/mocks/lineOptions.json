@@ -1,7 +1,7 @@
 {
     "chart": {
         "type": "bar",
-        "height": "900px"
+        "height": "600px"
     },
 
     "title": {
@@ -9,7 +9,7 @@
     }, 
        
     "xAxis": {
-        "categories": ["Janeiro", "Fevereiro", "Março", "Abril", "Junho"],
+        "categories": ["Ativos", "Usuarios"],
         "title": {
             "text": null
         }
@@ -18,7 +18,7 @@
     "yAxis": {
         "min": 0,
         "title": {
-            "text": "Numero de Falhas",
+            "text": "",
             "align": "high"
         },
         "labels": {
@@ -27,7 +27,7 @@
     },
 
     "tooltip": {
-        "valueSuffix": "falhas"
+        "valueSuffix": ""
     },
 
     "plotOptions": {
@@ -51,25 +51,5 @@
         "enabled": false
     },
 
-    "series": [{
-        "name": "Hal",
-        "data": [1, 3, 1, 0, 4],
-        "color": "magenta"
-    }, {
-        "name": "Multivac",
-        "data": [3, 5, 1, 2, 3],
-        "color": "orange"
-    }, {
-        "name": "Thebrain",
-        "data": [4, 2, 2, 1, 3],
-        "color": "cyan"
-    }, {
-        "name": "Tobias",
-        "data": [4, 2, 2, 1, 3],
-        "color": "deeppink"
-    }, {
-        "name": "Jaguar",
-        "data": [4, 2, 2, 1, 3],
-        "color": "aquamarine"
-    }]
+    "series": []
 }
