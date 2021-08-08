@@ -2,8 +2,7 @@
     "chart": {
       "type": "pie",
       "height": "280",
-      "width": "200",
-      "margin": [0, 0, 120, 0]
+      "width": "210"      
     },
 
     "title": {
@@ -31,7 +30,7 @@
     },
 
     "series": [{
-        "name": "Brands",
+        "name": "Status",
         "colorByPoint": true,        
         "data": [{
           "name": "inOperation",

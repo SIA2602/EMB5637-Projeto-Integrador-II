@@ -1,7 +1,6 @@
 import styled from "styled-components"
 
-export const Wrapper = styled.div`
-    height: ${props => props.heightCard}vh;
+export const Wrapper = styled.div`      
     width: ${props => props.widthCardDesktop}vw;   
     margin-right: 24px;
     background-color: #FFFFFF;

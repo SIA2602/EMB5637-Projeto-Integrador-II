@@ -1,11 +1,9 @@
 import styled from "styled-components"
 
-export const Wrapper = styled.div`
-    height: ${props => props.heightBodyCard}vh;
+export const Wrapper = styled.div`    
     width: ${props => props.widthCardDesktop}vw;
     text-align: center;  
-    margin-top: 16px;
-
+    margin-top: 24px;
     display: grid;
     align-items: center;
     justify-content: center;    

@@ -44,3 +44,6 @@ export const ScrollingY = styled.div`
     
     box-shadow: 0px 0px 5px 0px #CACACA;
 `
+export const WrapperLineChart = styled.div`
+    width: 90vw;
+`
