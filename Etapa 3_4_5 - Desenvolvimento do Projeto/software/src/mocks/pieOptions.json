@@ -34,15 +34,15 @@
         "colorByPoint": true,        
         "data": [{
           "name": "inOperation",
-          "y": 3,
+          "y": 4,
           "color": "green"          
         }, {
           "name": "inAlert",
-          "y": 5,
+          "y": 2,
           "color": "orange"
         }, {
           "name": "inDowntime",
-          "y": 2,
+          "y": 1,
           "color": "red"
         }]
       }]   

@@ -13,33 +13,30 @@ function HomeView(){
     const widthCardDesktop = 20
     const heightCard = 50    
     const heightHeaderCard = 5
-    const heightBodyCard = heightCard-heightHeaderCard
-    
-    const chartPie = <div><Charts options={PieChart} /></div>    
+    const heightBodyCard = heightCard-heightHeaderCard   
     
     const [api, setApi] = useState(Api)
-    const [dataLineChart, setdataLineChart] = useState(LineChart)
+    const [dataLineChart, setdataLineChart] = useState(LineChart)        
     dataLineChart.series = api.unidades.map(unidade => unidade ? {name: unidade.name, data: [api.ativos.filter(ativo => ativo.unitId == unidade.id).length , api.usuarios.filter(usuario => usuario.unitId == unidade.id).length]} : {})
 
-    const chartLine = <WrapperLineChart><Charts options={dataLineChart} /></WrapperLineChart>
-    
     return <Wrapper>        
         <Title>SETORES</Title>
 
         <ScrollingX>     
-            {api.unidades.map(unidade => <Card title={unidade.name}
+            {api.unidades.map((unidade, indice) => <Card title={unidade.name}
                 icon={<TeamOutlined/>}
-                componentList={['Status dos Ativos', chartPie]}
+                componentList={['Status dos Ativos', <Charts
+                    options={PieChart} />]}
                 widthCardMobile={widthCardMobile}
                 widthCardDesktop={widthCardDesktop}
                 heightCard={heightCard}
                 heightBodyCard={heightBodyCard}
                 heightHeaderCard={heightHeaderCard}
-            />)}          
+            />)}                      
         </ScrollingX>   
 
         <ScrollingY>
-            {chartLine}
+            <WrapperLineChart><Charts options={dataLineChart} /></WrapperLineChart>
         </ScrollingY>                
     </Wrapper>
 }
