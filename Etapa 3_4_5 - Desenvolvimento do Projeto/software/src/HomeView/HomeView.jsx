@@ -26,7 +26,7 @@ function HomeView(){
             {api.unidades.map(unidade => <Card title={unidade.name}
                 icon={<TeamOutlined/>}
                 componentList={['Status dos Ativos', <Charts
-                    options={getPieChart()} />]}
+                    options={getPieChart(unidade, api)} />]}
                 widthCardMobile={widthCardMobile}
                 widthCardDesktop={widthCardDesktop}
                 heightCard={heightCard}
