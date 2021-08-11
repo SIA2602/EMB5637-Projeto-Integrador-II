@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import Card from '../shared/Card/Card'
-import PieChart from '../mocks/pieOptions.json'
+import getPieChart from '../utils/getPieChart'
 import LineChart from '../mocks/lineOptions.json'
 import Api from '../mocks/api.json'
 import Charts from '../shared/Charts/Charts'
@@ -23,10 +23,10 @@ function HomeView(){
         <Title>SETORES</Title>
 
         <ScrollingX>     
-            {api.unidades.map((unidade, indice) => <Card title={unidade.name}
+            {api.unidades.map(unidade => <Card title={unidade.name}
                 icon={<TeamOutlined/>}
                 componentList={['Status dos Ativos', <Charts
-                    options={PieChart} />]}
+                    options={getPieChart()} />]}
                 widthCardMobile={widthCardMobile}
                 widthCardDesktop={widthCardDesktop}
                 heightCard={heightCard}
