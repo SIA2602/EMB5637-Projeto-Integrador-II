@@ -7,7 +7,7 @@ export const Wrapper = styled.div`
     
     display: grid;
     align-items: end;
-    justify-content: center;       
+    justify-content: center;      
 `
 
 export const Title = styled.h3`    

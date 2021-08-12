@@ -1,10 +1,10 @@
 import React from 'react'
 import { Button, Wrapper } from './Header.styles'
 
-function Header({title, icon, widthCardDesktop, widthCardMobile, heightHeaderCard}){
+function Header({title, icon, onToggle, listaUsers, widthCardDesktop, widthCardMobile, heightHeaderCard}){
     return <Wrapper widthCardDesktop={widthCardDesktop} widthCardMobile={widthCardMobile} heightHeaderCard={heightHeaderCard}>
         {title}
-        <Button>{icon}</Button>
+        <Button onClick={() => onToggle(listaUsers)}>{icon}</Button>
     </Wrapper>
 }
 
