@@ -4,7 +4,7 @@ import getPieChart from '../utils/getPieChart'
 import LineChart from '../mocks/lineOptions.json'
 import Api from '../mocks/api.json'
 import Charts from '../shared/Charts/Charts'
-import { ScrollingX, Wrapper, ScrollingY, Title, WrapperLineChart } from './HomeView.styles'
+import { ScrollingX, Wrapper, ScrollingY, Title, WrapperLineChart, ImgProfile, ListTextUsers, SpaceText, LineSeparator } from './HomeView.styles'
 import { TeamOutlined, RollbackOutlined } from '@ant-design/icons'
 
 function HomeView(){
@@ -45,7 +45,7 @@ function HomeView(){
                 icon={<RollbackOutlined />}
                 onToggle={togglePageHome}
                 lista={api.unidades}                                    
-                componentList={['Status dos Ativos']}
+                componentList={[<ImgProfile src={user.imgProfile} />, <LineSeparator widthCardDesktop={widthCardDesktop} widthCardMobile={widthCardMobile}/>, <ListTextUsers widthCardDesktop={widthCardDesktop} widthCardMobile={widthCardMobile}><SpaceText>{user.email}</SpaceText>{user.foneNumber}</ListTextUsers>, <LineSeparator widthCardDesktop={widthCardDesktop} widthCardMobile={widthCardMobile}/>]}
                 widthCardMobile={widthCardMobile}
                 widthCardDesktop={widthCardDesktop}
                 heightCard={heightCard}

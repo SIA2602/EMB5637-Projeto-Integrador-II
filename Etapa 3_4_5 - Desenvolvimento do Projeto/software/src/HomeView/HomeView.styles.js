@@ -47,3 +47,33 @@ export const ScrollingY = styled.div`
 export const WrapperLineChart = styled.div`
     width: 90vw;
 `
+
+export const ImgProfile = styled.img`
+    width: 100px;
+    height: 100px;
+    border: 2px solid #30B4FF;
+    border-radius: 100%;
+    src: url(${props => props.src});
+    margin-bottom: 16px;
+`
+export const ListTextUsers = styled.div`
+    width: ${props => props.widthCardDesktop}vw;
+    @media (max-width: 1200px)
+    {
+        width: ${props => props.widthCardMobile}vw;   
+    } 
+    font-size: 12px;
+    text-align: left;    
+    
+    padding: 16px;
+`
+export const SpaceText = styled.div`
+    margin-bottom: 8px;
+`
+export const LineSeparator = styled.div`
+    width: auto;
+    height: 2px;
+    box-shadow: 0px 1px 0px 0px #E8E8E8;
+    margin-left: 16px;
+    margin-right: 16px;   
+`
