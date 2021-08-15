@@ -56,6 +56,19 @@ export const ImgProfile = styled.img`
     src: url(${props => props.src});
     margin-bottom: 16px;
 `
+export const ImgMachine = styled.img`
+    width: ${props => props.widthCardDesktop-5}vw; 
+    height: ${props => props.widthCardDesktop-5}vw;
+    @media (max-width: 1200px)
+    {
+        width: ${props => props.widthCardMobile-5}vw;   
+        height: ${props => props.widthCardMobile-5}vw;
+    }            
+    src: url(${props => props.src});
+    margin-bottom: 16px;
+    padding: 16px;
+`
+
 export const ListTextUsers = styled.div`
     width: ${props => props.widthCardDesktop}vw;
     @media (max-width: 1200px)
@@ -73,7 +86,13 @@ export const SpaceText = styled.div`
 export const LineSeparator = styled.div`
     width: auto;
     height: 2px;
-    box-shadow: 0px 1px 0px 0px #E8E8E8;
+    box-shadow: 0px 1px 0px 0px #E8E8E8;    
     margin-left: 16px;
     margin-right: 16px;   
+`
+export const Buttom = styled.button`   
+    border-radius: 100%;
+    background-color: transparent;
+    border: transparent;
+    color: #30B4FF; 
 `

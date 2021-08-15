@@ -1,11 +1,14 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import Card from '../shared/Card/Card'
 import getPieChart from '../utils/getPieChart'
+import getStringStatus from '../utils/getStringStatus'
 import LineChart from '../mocks/lineOptions.json'
 import Api from '../mocks/api.json'
 import Charts from '../shared/Charts/Charts'
-import { ScrollingX, Wrapper, ScrollingY, Title, WrapperLineChart, ImgProfile, ListTextUsers, SpaceText, LineSeparator } from './HomeView.styles'
-import { TeamOutlined, RollbackOutlined } from '@ant-design/icons'
+import { ScrollingX, Wrapper, ScrollingY, Title, WrapperLineChart, ImgProfile, ImgMachine, ListTextUsers, SpaceText, LineSeparator, Buttom } from './HomeView.styles'
+import { TeamOutlined, RollbackOutlined, PlusCircleOutlined } from '@ant-design/icons'
+import { Alert } from 'antd'
+import 'antd/dist/antd.css'
 
 function HomeView(){
 
@@ -24,7 +27,7 @@ function HomeView(){
                     icon={<TeamOutlined/>}
                     onToggle={togglePageUsers}                    
                     lista={api.usuarios.filter(usuario => usuario.unitId === unidade.id)}                                      
-                    componentList={['Status dos Ativos', <Charts options={getPieChart(unidade, api)} />]}
+                    componentList={[ <SpaceText>Status dos Ativos <Buttom onClick={() => togglePageAtivos(api.ativos.filter(ativo => ativo.unitId === unidade.id))}><PlusCircleOutlined /></Buttom></SpaceText>, <Charts options={getPieChart(unidade, api)} />]}
                     widthCardMobile={widthCardMobile}
                     widthCardDesktop={widthCardDesktop}
                     heightCard={heightCard}
@@ -67,13 +70,35 @@ function HomeView(){
                     icon={<TeamOutlined/>}
                     onToggle={togglePageUsers}                    
                     lista={api.usuarios.filter(usuario => usuario.unitId === unidade.id)}                                    
-                    componentList={['Status dos Ativos', <Charts options={getPieChart(unidade, api)} />]}
+                    componentList={[ <SpaceText>Status dos Ativos <Buttom onClick={() => togglePageAtivos(api.ativos.filter(ativo => ativo.unitId === unidade.id))}><PlusCircleOutlined /></Buttom></SpaceText>, <Charts options={getPieChart(unidade, api)} />]}
                     widthCardMobile={widthCardMobile}
                     widthCardDesktop={widthCardDesktop}
                     heightCard={heightCard}
                     heightBodyCard={heightBodyCard}
                     heightHeaderCard={heightHeaderCard}
                 />)}                   
+            </ScrollingX>  
+            <ScrollingY>
+                <WrapperLineChart><Charts options={dataLineChart} /></WrapperLineChart>
+            </ScrollingY>                
+        </Wrapper>          
+        setListCards(newCards)              
+    }
+
+    function togglePageAtivos(listAtivos){
+        const newCards = <Wrapper> <Title>ATIVOS</Title>
+            <ScrollingX>     
+                {listAtivos.map(ativo => <Card title={ativo.name}
+                icon={<RollbackOutlined />}
+                onToggle={togglePageHome}
+                lista={api.unidades}                                    
+                componentList={[<ImgMachine widthCardMobile={widthCardMobile} widthCardDesktop={widthCardDesktop} src={ativo.image} />, <Alert message={<SpaceText>{ativo.status} <Buttom ><PlusCircleOutlined /></Buttom></SpaceText>} type={getStringStatus(ativo.status)} showIcon />]}
+                widthCardMobile={widthCardMobile}
+                widthCardDesktop={widthCardDesktop}
+                heightCard={heightCard}
+                heightBodyCard={heightBodyCard}
+                heightHeaderCard={heightHeaderCard}
+            />)}                  
             </ScrollingX>  
             <ScrollingY>
                 <WrapperLineChart><Charts options={dataLineChart} /></WrapperLineChart>
