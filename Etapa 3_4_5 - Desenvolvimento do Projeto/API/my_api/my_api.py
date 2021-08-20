@@ -1,7 +1,9 @@
-from flask import Flask, request, jsonify
+from flask import Flask, request
+from flask_restful import Resource, Api
 import json
 
 aplication = Flask(__name__)
+apiRestFull = Api(aplication)
 
 api = {
   "ativos": [
@@ -362,32 +364,36 @@ api = {
 }
 
 #Funcao que permite POST ou GET para as unidades
-@aplication.route("/unidades", methods=["GET","POST"])
-def unidades():
-  if(request.method == "GET"):
-      return(jsonify(api.get("unidades")))
-  elif(request.method == "POST"):    
-      data = json.loads(request.data) 
-      for i in range(len(api["unidades"])):
-        if(api["unidades"][i]["id"] == data["id"]):
-          return(jsonify({"post": "error"}))
-      api["unidades"].append(data)       
-      return(jsonify({"post": "success"}))   
+class unidades(Resource):
+  def get(self):
+    return(api.get("unidades"))
+  def post(self):
+    data = json.loads(request.data) 
+    for i in range(len(api["unidades"])):
+      if(api["unidades"][i]["id"] == data["id"]):
+        return({"post": "error"})
+    api["unidades"].append(data)       
+    return({"post": "success"})
+
+apiRestFull.add_resource(unidades, "/unidades")
 
 #Funcao que permite DELETE para as unidades
-@aplication.route("/unidades/<int:id>/", methods=["DELETE"])
-def deleteUnidades(id):
-  if(request.method == "DELETE"):
+class deleteUnidades(Resource):
+  def delete(self, id):
     for i in range(len(api["unidades"])):
       if(api["unidades"][i-1]["id"] == id):     
         api["unidades"].pop(i-1)       
-    return(jsonify({"delete": "success"})) 
+    return({"delete": "success"}) 
+
+apiRestFull.add_resource(deleteUnidades, "/unidades/<int:id>/")
 
 #Retornando pelo metodo GET a api com toda sua estrutura
-@aplication.route("/api", methods=["GET"])
-def getApi():
-  if(request.method == "GET"):
-    return(jsonify(api))
+class getApi(Resource):
+  def get(self):
+    if(request.method == "GET"):
+      return(api)
+
+apiRestFull.add_resource(getApi, "/api")
 
 if __name__ == "__main__":
     aplication.run(debug=True)
