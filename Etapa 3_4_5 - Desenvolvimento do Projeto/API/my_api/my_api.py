@@ -1,8 +1,10 @@
 from flask import Flask, request
 from flask_restful import Resource, Api
+from flask_cors import CORS
 import json
 
 aplication = Flask(__name__)
+CORS(aplication)
 apiRestFull = Api(aplication)
 
 api = {
@@ -386,6 +388,30 @@ class deleteUnidades(Resource):
     return({"delete": "success"}) 
 
 apiRestFull.add_resource(deleteUnidades, "/unidades/<int:id>/")
+
+#Funcao que permite POST ou GET para os usuarios
+class usuarios(Resource):
+  def get(self):
+    return(api.get("usuarios"))
+  def post(self):
+    data = json.loads(request.data) 
+    for i in range(len(api["usuarios"])):
+      if(api["usuarios"][i]["matricula"] == data["matricula"]):
+        return({"post": "error"})
+    api["usuarios"].append(data)       
+    return({"post": "success"})
+
+apiRestFull.add_resource(usuarios, "/usuarios")
+
+#Funcao que permite DELETE para os usuarios
+class deleteUsuarios(Resource):
+  def delete(self, id):
+    for i in range(len(api["usuarios"])):
+      if(api["usuarios"][i-1]["matricula"] == id):     
+        api["usuarios"].pop(i-1)       
+    return({"delete": "success"}) 
+
+apiRestFull.add_resource(deleteUsuarios, "/usuarios/<int:id>/")
 
 #Retornando pelo metodo GET a api com toda sua estrutura
 class getApi(Resource):

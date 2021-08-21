@@ -1,9 +1,9 @@
-import React from 'react';
+import React, {useState} from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import HomeView from '../src/HomeView/HomeView'
 
-ReactDOM.render(
+ReactDOM.render(  
   <React.StrictMode>
     <HomeView />
   </React.StrictMode>,
