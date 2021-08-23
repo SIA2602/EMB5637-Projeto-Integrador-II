@@ -14,7 +14,7 @@ function TogglePageAtivos({api, listAtivos, dataLineChart, togglePageHome, width
             {listAtivos.map(ativo => <Card title={ativo.name}
             icon={<RollbackOutlined />}
             onToggle={togglePageHome}
-            lista={api.unidades}                                    
+            lista={[]}                                    
             componentList={[<ImgMachine widthCardMobile={widthCardMobile} widthCardDesktop={widthCardDesktop} src={ativo.image} />, <Alert message={<SpaceText>{ativo.status} <Buttom ><PlusCircleOutlined /></Buttom></SpaceText>} type={getStringStatus(ativo.status)} showIcon />]}
             widthCardMobile={widthCardMobile}
             widthCardDesktop={widthCardDesktop}

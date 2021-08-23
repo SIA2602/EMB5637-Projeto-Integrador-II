@@ -13,8 +13,8 @@ function TogglePageHome({api, dataLineChart, togglePageUsers, togglePageAtivos, 
             {api.unidades.map(unidade => <Card title={unidade.name}
                 icon={<TeamOutlined/>}
                 onToggle={togglePageUsers}                    
-                lista={api.usuarios.filter(usuario => usuario.unitId === unidade.id)}                                    
-                componentList={[ <SpaceText>Status dos Ativos <Buttom onClick={() => togglePageAtivos(api.ativos.filter(ativo => ativo.unitId === unidade.id))}><PlusCircleOutlined /></Buttom></SpaceText>, <Charts options={getPieChart(unidade, api)} />]}
+                lista={unidade.id}                                    
+                componentList={[ <SpaceText>Status dos Ativos <Buttom onClick={() => togglePageAtivos(unidade.id)}><PlusCircleOutlined /></Buttom></SpaceText>, <Charts options={getPieChart(unidade, api)} />]}
                 widthCardMobile={widthCardMobile}
                 widthCardDesktop={widthCardDesktop}
                 heightCard={heightCard}

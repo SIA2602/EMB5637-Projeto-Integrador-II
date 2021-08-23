@@ -21,23 +21,24 @@ function HomeView(){
     dataLineChart.series = api.unidades.map(unidade => unidade ? {name: unidade.name, data: [api.ativos.filter(ativo => ativo.unitId === unidade.id).length , api.usuarios.filter(usuario => usuario.unitId === unidade.id).length]} : {})
     const [listCards, setListCards] =  useState(<TogglePageHome api={api} dataLineChart={dataLineChart} togglePageUsers={togglePageUsers} togglePageAtivos={togglePageAtivos} widthCardMobile={widthCardMobile} widthCardDesktop={widthCardDesktop} heightCard={heightCard} heightHeaderCard={heightHeaderCard} heightBodyCard={heightBodyCard}/>)    
 
-    useEffect(() => {         
-        axios.get('https://ea85-186-232-36-168.ngrok.io//api').then(response => setApi(response.data))        
-    }, [listCards]);  
-
-    function togglePageUsers(listUsers){            
-        setListCards(<TogglePageUsers api={api} listUsers={listUsers} dataLineChart={dataLineChart} togglePageHome={togglePageHome} widthCardMobile={widthCardMobile} widthCardDesktop={widthCardDesktop} heightCard={heightCard} heightHeaderCard={heightHeaderCard} heightBodyCard={heightBodyCard}/>)              
+    function togglePageUsers(unidadeId){            
+        setListCards(<TogglePageUsers api={api} listUsers={api.usuarios.filter(usuario => usuario.unitId === unidadeId)} dataLineChart={dataLineChart} togglePageHome={togglePageHome} widthCardMobile={widthCardMobile} widthCardDesktop={widthCardDesktop} heightCard={heightCard} heightHeaderCard={heightHeaderCard} heightBodyCard={heightBodyCard}/>)              
     }
 
-    function togglePageHome(){               
+    function togglePageHome(){    
+        console.log(api)             
         setListCards(<TogglePageHome api={api} dataLineChart={dataLineChart} togglePageUsers={togglePageUsers} togglePageAtivos={togglePageAtivos} widthCardMobile={widthCardMobile} widthCardDesktop={widthCardDesktop} heightCard={heightCard} heightHeaderCard={heightHeaderCard} heightBodyCard={heightBodyCard}/>)              
     }
 
-    function togglePageAtivos(listAtivos){                 
-        setListCards(<TogglePageAtivos api={api} listAtivos={listAtivos} dataLineChart={dataLineChart} togglePageHome={togglePageHome} widthCardMobile={widthCardMobile} widthCardDesktop={widthCardDesktop} heightCard={heightCard} heightHeaderCard={heightHeaderCard} heightBodyCard={heightBodyCard}/>)              
+    function togglePageAtivos(unidadeId){                 
+        setListCards(<TogglePageAtivos api={api} listAtivos={api.ativos.filter(ativo => ativo.unitId === unidadeId)} dataLineChart={dataLineChart} togglePageHome={togglePageHome} widthCardMobile={widthCardMobile} widthCardDesktop={widthCardDesktop} heightCard={heightCard} heightHeaderCard={heightHeaderCard} heightBodyCard={heightBodyCard}/>)              
     }   
 
-    return listCards
+    useEffect(() => {         
+        axios.get(' https://886c-186-232-38-178.ngrok.io/api').then(response => setApi(response.data))        
+    }, [listCards]);  
+
+    return listCards 
 }
 
 export default HomeView

@@ -12,7 +12,7 @@ function TogglePageUsers({api, listUsers, dataLineChart, togglePageHome, widthCa
             {listUsers.map(user => <Card title={user.name}
             icon={<RollbackOutlined />}
             onToggle={togglePageHome}
-            lista={api.unidades}                                    
+            lista={[]}                                    
             componentList={[<ImgProfile src={user.imgProfile} />, <LineSeparator widthCardDesktop={widthCardDesktop} widthCardMobile={widthCardMobile}/>, <ListTextUsers widthCardDesktop={widthCardDesktop} widthCardMobile={widthCardMobile}><SpaceText>{user.email}</SpaceText>{user.foneNumber}</ListTextUsers>, <LineSeparator widthCardDesktop={widthCardDesktop} widthCardMobile={widthCardMobile}/>]}
             widthCardMobile={widthCardMobile}
             widthCardDesktop={widthCardDesktop}

@@ -3,7 +3,6 @@ import Body from './Body/Body'
 import { Wrapper } from './Card.styles'
 import Header from './Header/Header'
 
-
 class Card extends React.Component{
 
     constructor(props){
