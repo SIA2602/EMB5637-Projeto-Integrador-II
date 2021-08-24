@@ -385,7 +385,8 @@ class deleteUnidades(Resource):
     for i in range(len(api["unidades"])):
       if(api["unidades"][i-1]["id"] == id):     
         api["unidades"].pop(i-1)       
-    return({"delete": "success"}) 
+        return({"delete": "success"}) 
+    return({"delete": "error"})
 
 apiRestFull.add_resource(deleteUnidades, "/unidades/<int:id>/")
 
@@ -409,9 +410,35 @@ class deleteUsuarios(Resource):
     for i in range(len(api["usuarios"])):
       if(api["usuarios"][i-1]["matricula"] == id):     
         api["usuarios"].pop(i-1)       
-    return({"delete": "success"}) 
+        return({"delete": "success"})
+    return({"delete": "error"})
 
 apiRestFull.add_resource(deleteUsuarios, "/usuarios/<int:id>/")
+
+#Funcao que permite POST ou GET para os ativos
+class ativos(Resource):
+  def get(self):
+    return(api.get("ativos"))
+  def post(self):
+    data = json.loads(request.data) 
+    for i in range(len(api["ativos"])):
+      if(api["ativos"][i]["id"] == data["id"]):
+        return({"post": "error"})
+    api["ativos"].append(data)       
+    return({"post": "success"})
+
+apiRestFull.add_resource(ativos, "/ativos")
+
+#Funcao que permite DELETE para os ativos
+class deleteAtivos(Resource):
+  def delete(self, id):
+    for i in range(len(api["ativos"])):
+      if(api["ativos"][i-1]["id"] == id):     
+        api["ativos"].pop(i-1)       
+        return({"delete": "success"})
+    return({"delete": "error"})
+
+apiRestFull.add_resource(deleteAtivos, "/ativos/<int:id>/")
 
 #Retornando pelo metodo GET a api com toda sua estrutura
 class getApi(Resource):
