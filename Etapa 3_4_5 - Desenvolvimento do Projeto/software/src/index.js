@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import HomeView from '../src/HomeView/HomeView'
