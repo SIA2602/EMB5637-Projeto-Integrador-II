@@ -21,7 +21,7 @@ function HomeView(){
     const heightBodyCard = heightCard-heightHeaderCard     
 
     //URL da api
-    const urlAPI = 'https://ff13-186-232-33-70.ngrok.io/api'
+    const urlAPI = ' https://0a89-186-232-33-70.ngrok.io/api'
     
     const [api, setApi] = useState({
         "ativos":[],
