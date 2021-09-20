@@ -3,13 +3,13 @@ import requests
 
 class TestApiMethods(unittest.TestCase):
 
-    URL = "http://127.0.0.1:5000"
+    URL = "http://3.19.181.158/"
     list_id_unidades = []
     list_id_usuarios = []
     list_id_ativos = []
 
     def test_get_all(self):
-        request = requests.get(f'{self.URL}/api')
+        request = requests.get(f'{self.URL}/api/tudo')
         self.assertEqual(request.status_code, 200)
 
     def test_get_unidades(self):
@@ -19,7 +19,7 @@ class TestApiMethods(unittest.TestCase):
         for unidade in request["items"]:
             self.list_id_unidades.append(unidade["id"]) 
 
-    def test_post_unidades_existente(self):
+    def test_post_unidade_existente(self):
         for i in range(len(self.list_id_unidades)):
             request = requests.post(f'{self.URL}/api/unidades', json={
                 "id": self.list_id_unidades[i],
